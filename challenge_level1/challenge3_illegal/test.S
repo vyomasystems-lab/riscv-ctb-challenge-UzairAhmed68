@@ -10,10 +10,12 @@ RVTEST_CODE_BEGIN
   .option norvc
 
   li TESTNUM, 2
+  TEST_PASSFAIL
+
 illegal_instruction:
   .word 0              
   j fail
-  TEST_PASSFAIL
+  #TEST_PASSFAIL
 
   .align 8
   .global mtvec_handler

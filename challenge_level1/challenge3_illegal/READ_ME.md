@@ -1,0 +1,1 @@
+This challenge had a misplaced TEST_PASSFAIL Macro which is placed after the j fail instruction, which means it won't be reached as the code jumps to fail immediately after encountering the .word 0 instruction. Hence The TEST_PASSFAIL macro should be placed outside the illegal_instruction loop.
